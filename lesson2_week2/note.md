@@ -31,7 +31,7 @@
 
   算法步骤为：
 
-  ​								![amda]()
+  ​								![amda](https://github.com/miaosann/DL_Learning/blob/master/lesson2_week2/assignment2/images/amda.PNG)
 
   > 运用之前的v，实现了一种更好的更新参数方式。
 
