@@ -16,7 +16,7 @@
 
       在前向传播的过程中，我们将使用多种过滤器对输入的数据进行卷积操作，每个过滤器会产生一个2D的矩阵，我们可以把它们堆叠起来，于是这些2D的卷积矩阵就变成了高维的矩阵。（注意：矩阵切片操作，n_C为这一层的过滤器数量）
 
-      ![]()
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/1.PNG)
 
     - 反向卷积
 
@@ -27,7 +27,10 @@
       dW[:,:,:,c] += a_slice * dZ[i,h,w,c]
       db[:,:,:,c] += dZ[i,h,w,c]
       ```
-
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/dA.PNG)
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/dW.PNG)
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/db.PNG)
+  
   - 池化模块
 
     池化层会减少输入的宽度和高度，这样它会较少计算量的同时也使特征检测器对其在输入中的位置更加稳定。
@@ -38,19 +41,19 @@
 
       实现类似于前向卷积，最后一步不同而已。
 
-      ![]()
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/2.PNG)
 
     - 创建掩码
 
       最大池化：从输入矩阵中创建掩码，以保存最大值的矩阵的位置。（mask中true位置是最大值位置）
 
-      ![]()
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/max.PNG)
 
     - 值分配
 
       平均池化：给定一个值，为按矩阵大小平均分配到每一个矩阵位置中。
 
-      ![]()
+      ![](https://github.com/miaosann/DL_Learning/blob/master/lesson4_week1/img/average.PNG)
 
     - 反向池化
 
